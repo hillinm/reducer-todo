@@ -1,6 +1,7 @@
-import React, { useState, useReducer } from 'react';
+import React, { useReducer } from 'react';
 import AddToDo from './AddToDo';
 import TodoList from './TodoList';
+import DeleteCompleted from './DeleteCompleted';
 import './TodoCard.css';
 
 import {
@@ -38,12 +39,13 @@ const TodoCard = (props) => {
             <TodoList
             data = {state.todos}
             toggleTask = {toggleTask}
-            deleteTask ={deleteTask}
             />
             </div>
         </div>
-        <AddToDo addTask = {addTask}/>
-        <button>Clear Completed Tasks</button>
+        <AddToDo />
+        <DeleteCompleted
+        deleteTask = {deleteTask}
+        />
     </div>
     )
 };

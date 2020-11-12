@@ -6,7 +6,7 @@ export const initialState = {
     todos: [
         {
             item: 'Learn about reducers',
-            completed: true,
+            completed: false,
             id: 3892987589
         },
         {
@@ -44,8 +44,9 @@ export const reducer = (state, action) => {
                         return {
                             ...item,
                             completed: !item.completed
-                        }
+                        };
                     }
+                    return item;
                 })
             }
         case "DELETE":
