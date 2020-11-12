@@ -7,10 +7,11 @@ const TodoList = (props) => {
     return (
         <div>
         {props.data.map(e => {
+            console.log(e.data)
             return (
             <div
-            onClick= {() => props.toggleTask(props.data.id)}
-            className={`${props.data.completed ? "completed" : "incomplete"}`}
+            onClick= {() => props.toggleTask(e.id)}
+            className={`${e.completed ? "completed" : "incomplete"}`}
             >
             <p>{e.item}</p>
             </div>

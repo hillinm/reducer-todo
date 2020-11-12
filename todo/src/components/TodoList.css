@@ -2,6 +2,7 @@
     font-style: normal;
 }
 
-.complete {
+.completed {
     font-style: italic;
+    text-decoration: line-through;
 }

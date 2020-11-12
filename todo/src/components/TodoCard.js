@@ -34,7 +34,7 @@ const TodoCard = (props) => {
         <div className="card">
             <h1>Honey Do List</h1>
             <div className="item">
-            <h4>(checkbox to complete)</h4>
+            <h4>(completed tasks are in italics)</h4>
             <TodoList
             data = {state.todos}
             toggleTask = {toggleTask}
@@ -43,6 +43,7 @@ const TodoCard = (props) => {
             </div>
         </div>
         <AddToDo addTask = {addTask}/>
+        <button>Clear Completed Tasks</button>
     </div>
     )
 };
