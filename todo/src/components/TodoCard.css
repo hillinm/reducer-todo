@@ -1,0 +1,18 @@
+.container {
+    background-color: teal;
+    box-shadow: 5px 5px 5px black;
+    width: 500px;
+    border-radius: 5%;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+p {
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+}
+h1 {
+    font-weight: bold;
+    font-style: italic;
+}
