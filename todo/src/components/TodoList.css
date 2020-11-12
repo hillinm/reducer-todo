@@ -1,0 +1,7 @@
+.incomplete {
+    font-style: normal;
+}
+
+.complete {
+    font-style: italic;
+}

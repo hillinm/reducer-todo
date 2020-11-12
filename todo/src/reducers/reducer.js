@@ -1,8 +1,12 @@
+export const ADD = "ADD";
+export const TOGGLE = "TOGGLE";
+export const DELETE = "DELETE";
+
 export const initialState = {
     todos: [
         {
             item: 'Learn about reducers',
-            completed: false,
+            completed: true,
             id: 3892987589
         },
         {
@@ -20,5 +24,36 @@ export const initialState = {
 };
 
 export const reducer = (state, action) => {
-    return state;
+    console.log(state.todos)
+    switch (action.type) {
+        case "ADD":
+            const newToDo = {
+                item: action.payload,
+                completed: false,
+                id: Date.now()
+            };
+        return {
+            ...state,
+            todos: [...state.todos, newToDo]
+        };
+        case "TOGGLE":
+            return {
+                ...state,
+                todos: state.todos.map(item => {
+                    if (action.payload === item.id) {
+                        return {
+                            ...item,
+                            completed: !item.completed
+                        }
+                    }
+                })
+            }
+        case "DELETE":
+            return {
+                ...state,
+                todos: state.todos.filter(task => !task.completed)
+            }
+        default:
+            return state;
+    }
 }

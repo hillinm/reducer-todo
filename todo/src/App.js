@@ -1,7 +1,9 @@
 import React from 'react';
 import Header from './components/Header'
-import './App.css';
 import TodoCard from './components/TodoCard';
+
+
+import './App.css';
 
 function App() {
   return (

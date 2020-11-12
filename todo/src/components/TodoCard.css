@@ -7,6 +7,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 p {
     color: white;
     font-weight: bold;
@@ -14,5 +15,9 @@ p {
 }
 h1 {
     font-weight: bold;
+    font-style: italic;
+}
+h4 {
+    font-size: 10px;
     font-style: italic;
 }
